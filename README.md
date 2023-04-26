@@ -1,18 +1,32 @@
-rust-iconv
-==========
+# rust-iconv
 
-[![Build Status](https://travis-ci.org/andelf/rust-iconv.svg?branch=master)](https://travis-ci.org/andelf/rust-iconv)
+`iconv`链接库的`Rust`绑定。
 
-iconv (libiconv) bindings for Rust.
+## 链接库依赖
 
-# Installation
+简单地讲，需要在操作系统内预置`libiconv`动态链接库。
 
-    cargo build
+### `Linux`操作系统
 
-# Testing
+大部主流`Linux OS`都包含有`libiconv`。若你的`Linux OS`版本比较早或是`compact`版而缺失了`libiconv`也不必慌。按如下方式补装即可：
 
-    cargo test
+```shell
+wget http://ftp.gnu.org/pub/gnu/libiconv/libiconv-1.9.1.tar.gz
+tar -xzvf libiconv-1.9.1.tar.gz
+cd libiconv-1.9.1.tar.gz
+./configure --prefix=/usr/local
+sudo make -j8
+sudo make install
+sudo ln -s /usr/local/lib/libiconv.so /usr/lib/libiconv.so
+sudo ln -s /usr/local/lib/libiconv.so.2 /usr/lib/libiconv.so.2
+```
 
-# Usage
+### `Windows`操作系统
 
-Refer ``lib.rs``.
+要么，从[setup](https://sourceforge.net/projects/gnuwin32/files/libiconv/1.9.2-1/libiconv-1.9.2-1.exe/download?use_mirror=jaist&download=)直接下载安装包，并本地安装之。缺点就是会“污染”你的`PATH`环境变量。
+
+要么，从[binary](https://sourceforge.net/projects/gnuwin32/files/libiconv/1.9.2-1/libiconv-1.9.2-1-bin.zip/download?use_mirror=jaist&download=)下载预编译包。在解压缩之后，将其下的`bin`目录添加到你的编译环境变量`RUST_FLAGS`内。比如，
+
+```shell
+set RUST_FLAGS=-L C:\\libiconv-1.9.2-1-bin\\bin
+```
