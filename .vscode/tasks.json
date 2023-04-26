@@ -1,0 +1,124 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [{
+        "label": "check",
+        "command": "cargo",
+        "args": [
+            "check"
+        ],
+        "options": {
+            "cwd": "${workspaceFolder}"
+        },
+        "presentation": {
+            "echo": true,
+            "reveal": "always",
+            "focus": false,
+            "panel": "shared"
+        },
+        "group": {
+            "kind": "build",
+            "isDefault": true
+        },
+        "isBackground": true,
+        "problemMatcher": {
+            "owner": "wasm-pack",
+            "background": {
+                "activeOnStart": true,
+                "beginsPattern": "Checking for the Wasm target\\.\\.\\.",
+                "endsPattern": "Your wasm pkg is ready to publish at"
+            },
+            "pattern": [{
+                "regexp": "^\\s*(\\S+)\\s*$",
+                "file": 1
+            }, {
+                "regexp": "^\\s+(\\d+):(\\d+)\\s+(\\S+)\\s+(.*)\\s\\s+(.*)\\s*$",
+                "line": 1,
+                "column": 2,
+                "severity": 3,
+                "message": 4,
+                "code": 5
+            }]
+        }
+    }, {
+        "label": "测试",
+        "command": "cargo",
+        "args": [
+            "test"
+        ],
+        "options": {
+            "cwd": "${workspaceFolder}"
+        },
+        "presentation": {
+            "echo": true,
+            "reveal": "always",
+            "focus": false,
+            "panel": "shared"
+        },
+        "group": {
+            "kind": "build",
+            "isDefault": true
+        },
+        "isBackground": true,
+        "problemMatcher": {
+            "owner": "gui-app",
+            "background": {
+                "activeOnStart": true,
+                "beginsPattern": "Checking for the Wasm target\\.\\.\\.",
+                "endsPattern": "Your wasm pkg is ready to publish at"
+            },
+            "pattern": [{
+                "regexp": "^\\s*(\\S+)\\s*$",
+                "file": 1
+            }, {
+                "regexp": "^\\s+(\\d+):(\\d+)\\s+(\\S+)\\s+(.*)\\s\\s+(.*)\\s*$",
+                "line": 1,
+                "column": 2,
+                "severity": 3,
+                "message": 4,
+                "code": 5
+            }]
+        }
+    }, {
+        "label": "发布",
+        "command": "cargo",
+        "args": [
+            "build",
+            "--release"
+        ],
+        "options": {
+            "cwd": "${workspaceFolder}"
+        },
+        "presentation": {
+            "echo": true,
+            "reveal": "always",
+            "focus": false,
+            "panel": "shared"
+        },
+        "group": {
+            "kind": "build",
+            "isDefault": true
+        },
+        "isBackground": true,
+        "problemMatcher": {
+            "owner": "gui-app",
+            "background": {
+                "activeOnStart": true,
+                "beginsPattern": "Checking for the Wasm target\\.\\.\\.",
+                "endsPattern": "Your wasm pkg is ready to publish at"
+            },
+            "pattern": [{
+                "regexp": "^\\s*(\\S+)\\s*$",
+                "file": 1
+            }, {
+                "regexp": "^\\s+(\\d+):(\\d+)\\s+(\\S+)\\s+(.*)\\s\\s+(.*)\\s*$",
+                "line": 1,
+                "column": 2,
+                "severity": 3,
+                "message": 4,
+                "code": 5
+            }]
+        }
+    }]
+}
