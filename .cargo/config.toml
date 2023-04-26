@@ -1,4 +1,5 @@
 [build]
+target-dir = "../rust-iconv-1-target"
 rustflags = [
     "-Wabsolute_paths_not_starting_with_crate", # 以`::`导入`external crate`；以`crate::`绝对路径导入本地模块
     "-Welided_lifetimes_in_paths", # 不可省略【类型】标注上的生命周期参数。

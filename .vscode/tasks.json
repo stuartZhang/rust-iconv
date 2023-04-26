@@ -45,7 +45,9 @@
         "label": "测试",
         "command": "cargo",
         "args": [
-            "test"
+            "test",
+            "--",
+            "--nocapture"
         ],
         "options": {
             "cwd": "${workspaceFolder}"
