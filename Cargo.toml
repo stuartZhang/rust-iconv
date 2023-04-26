@@ -2,11 +2,11 @@
 name = "iconv"
 description = "iconv bindings for Rust"
 version = "0.1.1"
-authors = ["ShuYu Wang <andelf@gmail.com>", "hhggit <zh.xz@outlook.com>"]
-repository = "https://github.com/andelf/rust-iconv"
+authors = ["Stuart Zhang<stuartpage@qq.com>"]
+repository = "https://github.com/stuartZhang/rust-iconv"
 license = "MIT"
 keywords = ["iconv", "encoding"]
-edition = "2018"
+edition = "2021"
 
 [dependencies]
 libc = "0.2.97"
