@@ -28,5 +28,5 @@ sudo ln -s /usr/local/lib/libiconv.so.2 /usr/lib/libiconv.so.2
 要么，从[binary](https://sourceforge.net/projects/gnuwin32/files/libiconv/1.9.2-1/libiconv-1.9.2-1-bin.zip/download?use_mirror=jaist&download=)下载预编译包。在解压缩之后，将其下的`bin`目录添加到你的编译环境变量`RUST_FLAGS`内。比如，
 
 ```shell
-set RUST_FLAGS=-L C:\\libiconv-1.9.2-1-bin\\bin
+set RUST_FLAGS=-L C:\libiconv-1.9.2-1-bin\bin
 ```
