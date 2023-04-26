@@ -1,5 +1,5 @@
 [package]
-name = "iconv"
+name = "iconv-sys"
 description = "iconv bindings for Rust"
 version = "0.1.1"
 authors = ["Stuart Zhang<stuartpage@qq.com>"]
