@@ -30,3 +30,7 @@ sudo ln -s /usr/local/lib/libiconv.so.2 /usr/lib/libiconv.so.2
 ```shell
 set RUST_FLAGS=-L C:\libiconv-1.9.2-1-bin\bin
 ```
+
+## 吐槽
+
+同一款`libiconv`链接库怎么对`Linux`与`Windows`操作系统提供了**不同名**的导出函数呢？这个“缺德的”命名差异导致我在【编译期·动态链接】环节卡住了好几天。相对于`Linux`版的链接库导出函数名，`Windows`版的每个导出函数都有一个`lib`前缀 —— 故意的吧？真要命。
