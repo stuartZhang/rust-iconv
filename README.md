@@ -8,7 +8,7 @@
 
 ### `Linux`操作系统
 
-大部主流`Linux OS`都包含有`libiconv`。若你的`Linux OS`版本比较早或是`compact`版而缺失了`libiconv`也不必慌。按如下方式补装即可：
+大部分主流`Linux OS`都包含有`libiconv`。若你的`Linux OS`版本比较早或是`compact`版而缺失了`libiconv`也不必慌。按如下方式补装即可：
 
 ```shell
 wget http://ftp.gnu.org/pub/gnu/libiconv/libiconv-1.9.1.tar.gz
