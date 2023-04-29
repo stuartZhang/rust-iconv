@@ -7,6 +7,7 @@ repository = "https://github.com/stuartZhang/rust-iconv"
 license = "MIT"
 keywords = ["iconv", "encoding"]
 edition = "2021"
+publish = ["crates-io"]
 
 [dependencies]
 libc = "0.2.97"
