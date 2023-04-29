@@ -2,6 +2,14 @@
 
 `iconv`链接库的`Rust`绑定。
 
+## 向`Cargo.toml`导入依赖
+
+因为已经与`crates.io`上现有的包重名，所以请直接添加`git`依赖：
+
+```toml
+iconv-sys = { git = "https://github.com/stuartZhang/rust-iconv", tag = "0.1.2" }
+```
+
 ## 链接库依赖
 
 简单地讲，需要在操作系统内预置`libiconv`动态链接库。
