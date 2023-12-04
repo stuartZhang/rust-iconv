@@ -1,12 +1,13 @@
 [package]
-name = "iconv-sys"
+authors = ["stuart_zhang <stuartpage@qq.com>"]
+categories = ["API bindings", "External FFI bindings", "Operating systems", "Text processing"]
 description = "iconv bindings for Rust"
-version = "0.1.1"
-authors = ["Stuart Zhang<stuartpage@qq.com>"]
-repository = "https://github.com/stuartZhang/rust-iconv"
-license = "MIT"
-keywords = ["iconv", "encoding"]
 edition = "2021"
+keywords = ["iconv", "encoding"]
+license = "MIT"
+name = "iconv-compat-win-sys"
+version = "0.1.1"
+repository = "https://github.com/stuartZhang/rust-iconv"
 
 [dependencies]
 libc = "0.2.97"
